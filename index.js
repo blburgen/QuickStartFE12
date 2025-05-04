@@ -17,14 +17,18 @@ function renderStateList() {
     stateList.map(renderState).forEach(span => stateContainer.appendChild(span));
 }
 
+// render each item
+
 function renderState(state){
     const stateSpan = document.createElement("span");
+    // spacing of each state
     stateSpan.className = "col-lg-3 col-md-4"
+    //formate of each state with a delete button
     stateSpan.innerHTML = `
         ${state.title}
         <button id="delete-button" class="btn btn-sm btn-outline-danger">Delete</button>
     `
-
+    //actions of the delete button
     stateSpan.querySelector("#delete-button").addEventListener("click", async () =>
     {
         await deleteState(state.id);
