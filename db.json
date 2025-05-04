@@ -1,0 +1,22 @@
+{
+    "state": [
+      {
+        "id": 1,
+        "title": "Alabama"
+      },
+      {
+        "id": 2,
+        "title": "Alaska"
+      },
+      {
+        "id": 3,
+        "title": "Arizona"
+      }
+    ],
+    "city": [
+      
+    ],
+    "attractions": [
+      
+    ]
+  }
