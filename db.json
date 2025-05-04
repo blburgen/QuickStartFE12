@@ -1,22 +1,38 @@
 {
-    "state": [
-      {
-        "id": 1,
-        "title": "Alabama"
-      },
-      {
-        "id": 2,
-        "title": "Alaska"
-      },
-      {
-        "id": 3,
-        "title": "Arizona"
-      }
-    ],
-    "city": [
-      
-    ],
-    "attractions": [
-      
-    ]
-  }
+  "state": [
+    {
+      "id": 1,
+      "title": "Alabama"
+    },
+    {
+      "id": 2,
+      "title": "Alaska"
+    },
+    {
+      "id": 3,
+      "title": "Arizona"
+    },
+    {
+      "title": "Arkansas",
+      "id": 4
+    },
+    {
+      "title": "California",
+      "id": 5
+    },
+    {
+      "title": "Colorado",
+      "id": 6
+    },
+    {
+      "title": "Connecticut",
+      "id": 7
+    },
+    {
+      "title": "Delaware",
+      "id": 8
+    }
+  ],
+  "city": [],
+  "attractions": []
+}
