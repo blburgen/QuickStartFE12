@@ -73,15 +73,20 @@
     </div>
     <div class="container-fluid mt-4">
         <h1 class="text-center">Quick Start Front End Week 12 Coding Assignment</h1>
-        <h2 class="text-center">Under Construction <br>This project uses a local database.  <br>To properly work a local json database on port 3005 must be running with a "state" table</h2>
-        <h3 class="display-4">States</h3>
-        <div id="states-container" class="my-3"></div>
-        <hr class="my-3">
+        <h2 class="text-center">
+            This project uses a local database.  <br>
+            To properly work a local json database on port 3005 must be running with a "state" table <br>
+            <a href=".\db.json" download>Download Sample json Database</a>
+        </h2>
         <form>
-            <label for="stateName">State Name</label>
+            <label for="stateName">State Name To Add</label>
             <input type="text" class="form-control" id="stateName">
             <button class="btn btn-success mt-3" onclick="OnStateClick(event)">Save</button>
         </form>
+        <hr class="my-3">
+        <h3 class="display-4">States</h3>
+        <div id="states-container" class="my-3 row"></div>
+        <hr class="my-3">
     </div>
     <script src="index.js"></script>  
 </body>

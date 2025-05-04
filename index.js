@@ -19,7 +19,21 @@ function renderStateList() {
 
 function renderState(state){
     const stateSpan = document.createElement("span");
-    stateSpan.innerHTML = `${state.title}, `
+    stateSpan.className = "col-lg-3 col-md-4"
+    stateSpan.innerHTML = `
+        ${state.title}
+        <button id="delete-button" class="btn btn-sm btn-outline-danger">Delete</button>
+    `
+
+    stateSpan.querySelector("#delete-button").addEventListener("click", async () =>
+    {
+        await deleteState(state.id);
+
+        const indexToDelete = stateList.indexOf(state);
+        stateList.splice(indexToDelete, 1)
+
+        renderStateList()
+    })
 
     return stateSpan;
 }
@@ -40,10 +54,16 @@ async function postStates(newStateData) {
     return response.json();
 }
 
+async function deleteState(idToDelete) {
+    await fetch("http://localhost:3005/state/" + idToDelete, {
+        method: "DELETE"
+    })
+}
+
 // When save button is clicked
 
 async function OnStateClick(event) {
-    // event.preventDefault();
+    event.preventDefault();
     const stateData = {
         title: stateName.value
     };
@@ -51,7 +71,8 @@ async function OnStateClick(event) {
 
     stateList.push(createdState);
 
-    renderStateList()
+    renderStateList();
+    stateName.value = "";
 }
 
 // Start up
